@@ -1,0 +1,3 @@
+select * from((select city, length(city) from station order by length(city) asc) order by length(city) asc, city asc limit 1)
+union
+select * from((select city, length(city) from station order by length(city) desc) order by length(city) desc, city desc limit 1);
